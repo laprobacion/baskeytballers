@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="214.0" prefWidth="405.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="scoreboard.about.FXMLABoutController">
+  <children>
+    <Label layoutX="38.0" layoutY="13.0" prefHeight="117.0" prefWidth="329.0" text="Copyright © 2014 Frank Ramos. All rights reserved. This software or any portion thereof may not be reproduced or used in any manner whatsoever without the express written permission of the author." wrapText="true" />
+    <Label layoutX="38.0" layoutY="124.0" prefHeight="52.0" prefWidth="315.0" text="For any inquiries or questions please email frank100502@gmail.com" wrapText="true" />
+  </children>
+</AnchorPane>

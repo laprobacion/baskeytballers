@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="544.0000999999975" prefWidth="730.0" style="-fx-background-color:black" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scoreboard.control.FXMLControlController">
+  <children>
+    <Label fx:id="teamAScore" alignment="TOP_RIGHT" layoutX="38.0" layoutY="30.0" minHeight="51.0" prefHeight="51.0" prefWidth="78.0" text="999" textAlignment="RIGHT">
+      <font>
+        <Font size="50.0" fx:id="x1" />
+      </font>
+      <textFill>
+        <Color blue="0.000" green="0.800" red="0.063" fx:id="x8" />
+      </textFill>
+    </Label>
+    <Label fx:id="teamBScore" alignment="TOP_RIGHT" font="$x1" layoutX="614.0" layoutY="32.0" minHeight="51.0" prefHeight="51.0" prefWidth="78.0" text="999" textAlignment="RIGHT" textFill="$x8" />
+    <Label fx:id="gameTime" alignment="TOP_RIGHT" layoutX="249.0" layoutY="225.0" minHeight="51.0" prefHeight="89.0" prefWidth="230.0" text="99:99" textAlignment="RIGHT" textFill="#ccc400">
+      <font>
+        <Font size="100.0" />
+      </font>
+    </Label>
+    <Button layoutX="14.0" layoutY="81.0" mnemonicParsing="false" onAction="#teamAPlusOneAction" text="+1" />
+    <Button layoutX="57.0" layoutY="81.0" mnemonicParsing="false" onAction="#teamAPlusTwoAction" text="+2" />
+    <Button layoutX="100.0" layoutY="81.0" mnemonicParsing="false" onAction="#teamAPlusThreeAction" text="+3" />
+    <Button layoutX="59.0" layoutY="112.0" mnemonicParsing="false" onAction="#teamALessOneAction" text="-1" />
+    <Label fx:id="gameShotClock" alignment="TOP_RIGHT" layoutX="325.0" layoutY="56.0" minHeight="51.0" prefHeight="67.0" prefWidth="78.0" text="99" textAlignment="RIGHT" textFill="#41cc00">
+      <font>
+        <Font size="70.0" />
+      </font>
+    </Label>
+    <Button layoutX="592.0" layoutY="81.0" mnemonicParsing="false" onAction="#teamBPlusOneAction" text="+1" />
+    <Button layoutX="635.0" layoutY="81.0" mnemonicParsing="false" onAction="#teamBPlusTwoAction" text="+2" />
+    <Button layoutX="678.0" layoutY="81.0" mnemonicParsing="false" onAction="#teamBPlusThreeAction" text="+3" />
+    <Button layoutX="637.0" layoutY="112.0" mnemonicParsing="false" onAction="#teamBLessOneAction" text="-1" />
+    <Button fx:id="startStopButton" layoutX="486.0" layoutY="270.0" mnemonicParsing="false" onAction="#startStopAction" text="start" />
+    <Label fx:id="teamAFoul" alignment="TOP_RIGHT" font="$x1" layoutX="43.0" layoutY="393.0" minHeight="51.0" prefHeight="51.0" prefWidth="57.0" text="99" textAlignment="RIGHT">
+      <textFill>
+        <Color blue="0.000" green="0.722" red="1.000" fx:id="x2" />
+      </textFill>
+    </Label>
+    <Button fx:id="teamAFoulLessOne" layoutX="40.0" layoutY="443.0" mnemonicParsing="false" onAction="#teamAFoulLessOneAction" text="-1" />
+    <Button layoutX="75.0" layoutY="443.0" mnemonicParsing="false" onAction="#teamAFoulPlusOneAction" text="+1" />
+    <Label fx:id="teamBFoul" alignment="TOP_RIGHT" font="$x1" layoutX="622.0" layoutY="398.0" minHeight="51.0" prefHeight="51.0" prefWidth="57.0" text="99" textAlignment="RIGHT" textFill="$x2" />
+    <Button layoutX="622.0" layoutY="448.0" mnemonicParsing="false" onAction="#teamBFoulLessOneAction" text="-1" />
+    <Button layoutX="658.0" layoutY="448.0" mnemonicParsing="false" onAction="#teamBFoulPlusOneAction" text="+1" />
+    <Label fx:id="teamAName" layoutX="14.0" layoutY="140.0" prefHeight="31.0" prefWidth="149.0" text="BasketBall Team A" textFill="WHITE">
+      <font>
+        <Font size="18.0" fx:id="x3" />
+      </font>
+    </Label>
+    <Label fx:id="teamBName" font="$x3" layoutX="576.0" layoutY="146.0" prefHeight="21.0" prefWidth="149.0" text="BasketBall Team B" textFill="WHITE" />
+    <Label fx:id="gamePeriod" font="$x1" layoutX="360.0" layoutY="399.0" minHeight="51.0" prefHeight="51.0" prefWidth="32.0" text="9" textFill="#72cc00" />
+    <Button layoutX="375.0" layoutY="448.0" mnemonicParsing="false" onAction="#gamePeriodPlusOneAction" text="+1" />
+    <Button layoutX="339.0" layoutY="448.0" mnemonicParsing="false" onAction="#gamePeriodLessOneAction" text="-1" />
+    <Label fx:id="periodLabel" layoutX="354.0" layoutY="387.0" text="Period" textFill="WHITE">
+      <font>
+        <Font size="15.0" fx:id="x5" />
+      </font>
+    </Label>
+    <Label id="shoClockLabel" fx:id="shotClockLabel" font="$x3" layoutX="326.0" layoutY="118.0" text="Shot Clock" textFill="WHITE" />
+    <Label fx:id="foulALabel" font="$x5" layoutX="55.0" layoutY="377.0" text="Fouls" textFill="WHITE" />
+    <Label fx:id="foulBLabel" font="$x5" layoutX="635.0" layoutY="382.0" text="Fouls" textFill="WHITE" />
+    <Button fx:id="shotClockResetButton" layoutX="305.0" layoutY="170.0" mnemonicParsing="false" onAction="#shotClockResetAction" text="Reset (F5)" />
+    <Label fx:id="teamATOL" font="$x1" layoutX="61.0" layoutY="218.0" minHeight="51.0" prefHeight="51.0" prefWidth="32.0" text="9">
+      <textFill>
+        <Color blue="0.000" green="0.576" red="0.600" fx:id="x4" />
+      </textFill>
+    </Label>
+    <Label id="tolNameA" fx:id="tolNameALabel" font="$x5" layoutX="62.0" layoutY="263.0" text="TOL" textFill="WHITE" />
+    <Label fx:id="teamBTOL" font="$x1" layoutX="643.0" layoutY="220.0" minHeight="51.0" prefHeight="51.0" prefWidth="32.0" text="9" textFill="$x4" />
+    <Label id="tolNameB" fx:id="tolNameBLabel" font="$x5" layoutX="644.0" layoutY="265.0" text="TOL" textFill="WHITE" />
+    <Button fx:id="teamATOLLessOne" layoutX="40.0" layoutY="279.0" mnemonicParsing="false" onAction="#teamATOLLessOneAction" text="-1" />
+    <Button fx:id="teamATOLPlusOne" layoutX="75.0" layoutY="279.0" mnemonicParsing="false" onAction="#teamATOLPlusOneAction" text="+1" />
+    <Button fx:id="teamBTOLLessOne" layoutX="622.0" layoutY="282.0" mnemonicParsing="false" onAction="#teamBTOLLessOneAction" text="-1" />
+    <Button fx:id="teamBTOLPlusOne" layoutX="657.0" layoutY="282.0" mnemonicParsing="false" onAction="#teamBTOLPlusOneAction" text="+1" />
+    <Button fx:id="buzzerButton" layoutX="326.0" layoutY="490.0" mnemonicParsing="false" onAction="#BuzzerAction" prefHeight="41.0" prefWidth="96.0" text="Buzzer (B)" />
+    <Label id="gameTime" fx:id="titleBarLabel" alignment="TOP_RIGHT" layoutX="263.0" layoutY="5.0" minHeight="31.0" prefHeight="31.0" prefWidth="195.0" text="Control Board" textAlignment="RIGHT" textFill="WHITE">
+      <font>
+        <Font size="30.0" />
+      </font>
+    </Label>
+    <Button layoutX="367.0" layoutY="140.0" mnemonicParsing="false" onAction="#shotClockSetAction" text="Set" />
+    <TextField fx:id="shotClockText" layoutX="332.0" layoutY="140.0" prefWidth="28.0" text="00" />
+    <Button layoutX="416.0" layoutY="319.0" mnemonicParsing="false" onAction="#gameTimeUpdateAction" text="Set" />
+    <TextField id="shotClockText" fx:id="gameSecText" layoutX="382.0" layoutY="319.0" prefWidth="28.0" text="00" />
+    <TextField id="shotClockText" fx:id="gameMinText" layoutX="317.0" layoutY="319.0" prefWidth="28.0" text="00" />
+    <Label fx:id="minLabel" font="$x5" layoutX="290.0" layoutY="324.0" text="Min" textFill="WHITE" />
+    <Label fx:id="secLabel" font="$x5" layoutX="353.0" layoutY="324.0" text="Sec" textFill="WHITE" />
+    <MenuBar layoutX="-1.0" layoutY="0.0">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#closeAction" text="Close" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Window">
+          <items>
+            <CheckMenuItem fx:id="scoreBoardMenu" mnemonicParsing="false" onAction="#scoreboardAction" text="Score Board" />
+            <CheckMenuItem mnemonicParsing="false" onAction="#shotClockAction" text="Shot Clock" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Actions">
+          <items>
+            <MenuItem fx:id="resetScoresButton" mnemonicParsing="false" onAction="#resetScoresAction" text="Reset Scores" />
+            <MenuItem fx:id="resetFoulsButton" mnemonicParsing="false" onAction="#resetFoulsAction" text="Reset Fouls" />
+            <MenuItem fx:id="resetTOLsButton" mnemonicParsing="false" onAction="#resetTOLsAction" text="Reset Timeouts" />
+            <MenuItem fx:id="gameTimeResetButton" mnemonicParsing="false" onAction="#gameTimeResetAction" text="Reset Game Clock" />
+            <MenuItem mnemonicParsing="false" onAction="#resetGameAction" text="Reset Game" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#aboutAction" text="About" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <Label id="teamAFoul" fx:id="teamAPenalty" alignment="TOP_RIGHT" layoutX="26.0" layoutY="349.0" minHeight="22.0" prefHeight="22.0" prefWidth="87.0" text="Penalty" textAlignment="RIGHT" textFill="$x2">
+      <font>
+        <Font size="20.0" fx:id="x6" />
+      </font>
+    </Label>
+    <Label id="teamAFoul" fx:id="teamBPenalty" alignment="TOP_RIGHT" font="$x6" layoutX="605.0" layoutY="354.0" minHeight="22.0" prefHeight="22.0" prefWidth="87.0" text="Penalty" textAlignment="RIGHT" textFill="$x2" />
+    <Button id="startStopButton" fx:id="startStopShotClockButton" layoutX="412.0" layoutY="83.0" mnemonicParsing="false" onAction="#startStopShotClockAction" text="start" />
+    <TextField fx:id="teamNameAText" layoutX="10.0" layoutY="146.0" prefWidth="149.0" />
+    <TextField id="teamNameAText" fx:id="teamNameBText" layoutX="576.0" layoutY="146.0" prefWidth="149.0" />
+    <Label fx:id="teamANameEditLabel" layoutX="67.0" layoutY="169.0" onMouseClicked="#editTeamALabelAction" style="-fx-cursor: hand;" text="edit">
+      <textFill>
+        <Color blue="1.000" green="0.000" red="0.078" fx:id="x7" />
+      </textFill>
+    </Label>
+    <Label fx:id="teamBNameEditLabel" layoutX="645.0" layoutY="169.0" onMouseClicked="#editTeamBLabelAction" style="-fx-cursor: hand;" text="edit" textFill="$x7" />
+    <Button fx:id="shotClockCancelButton" layoutX="271.0" layoutY="141.0" mnemonicParsing="false" text="cancel" />
+    <Button fx:id="clockCancelButton" layoutX="233.0" layoutY="320.0" mnemonicParsing="false" text="cancel" />
+    <Button fx:id="shotClockResetButton1" layoutX="378.0" layoutY="170.0" mnemonicParsing="false" onAction="#shotClockResetAction1" text="Reset (F6)" />
+  </children>
+</AnchorPane>

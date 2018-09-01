@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="460.0" prefWidth="602.9999000000025" style="-fx-background-color:black&#10;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="scoreboard.timeout.FXMLTimeoutController">
+  <children>
+    <Label id="shotClock" fx:id="timeOut" alignment="BOTTOM_RIGHT" contentDisplay="CENTER" layoutX="29.0" layoutY="15.0" maxHeight="-Infinity" minHeight="386.0" prefHeight="425.0" prefWidth="528.0" style=" -fx-label-padding:0;&#10;" text="00" textAlignment="CENTER" textFill="RED" underline="false">
+      <font>
+        <Font size="500.0" />
+      </font>
+    </Label>
+    <Label fx:id="timeoutLabel" layoutX="135.0" layoutY="-3.0" prefHeight="100.0" prefWidth="365.0" text="Timeout" textFill="#fff733">
+      <font>
+        <Font size="100.0" />
+      </font>
+    </Label>
+  </children>
+</AnchorPane>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="699.0" prefWidth="1362.0" style="-fx-background-color:black" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="scoreboard.main.FXMLDocumentController">
+  <children>
+    <Label fx:id="label" layoutX="126.0" layoutY="120.0" minHeight="16.0" minWidth="69.0" />
+    <Label fx:id="teamAScore" alignment="TOP_RIGHT" depthTest="INHERIT" focusTraversable="false" graphicTextGap="4.0" labelFor="$label" layoutX="-61.0" layoutY="-87.0" minHeight="178.0" prefHeight="459.0000999999975" prefWidth="614.0" text="99" textAlignment="RIGHT" textFill="RED" textOverrun="CLIP" wrapText="false">
+      <font>
+        <Font name="DS-Digital Bold" size="550.0" fx:id="x1" />
+      </font>
+    </Label>
+    <Label fx:id="teamBScore" alignment="TOP_RIGHT" depthTest="INHERIT" focusTraversable="false" font="$x1" graphicTextGap="4.0" layoutX="772.0" layoutY="-87.0" minHeight="178.0" prefHeight="459.0" prefWidth="602.0" text="99" textAlignment="RIGHT" textFill="RED" textOverrun="CLIP" wrapText="false">
+      <labelFor>
+        <Label id="label" layoutX="126.0" layoutY="120.0" minHeight="16.0" minWidth="69.0" />
+      </labelFor>
+    </Label>
+    <Label fx:id="gameTime" alignment="TOP_RIGHT" depthTest="INHERIT" focusTraversable="false" graphicTextGap="4.0" layoutX="219.0" layoutY="365.0" minHeight="178.0" prefHeight="338.0" prefWidth="924.0" text="99:99" textFill="#fff733" textOverrun="CLIP" wrapText="false">
+      <font>
+        <Font name="DS-Digital Bold" size="400.0" fx:id="x4" />
+      </font>
+      <labelFor>
+        <Label id="label" layoutX="126.0" layoutY="120.0" minHeight="16.0" minWidth="69.0" />
+      </labelFor>
+    </Label>
+    <Label fx:id="teamAName" alignment="CENTER" layoutX="15.0" layoutY="358.0" prefHeight="80.0" prefWidth="491.0" text="Team A" textAlignment="CENTER">
+      <font>
+        <Font name="DS-Digital Bold" size="90.0" fx:id="x2" />
+      </font>
+      <textFill>
+        <Color blue="0.875" green="0.875" red="0.875" fx:id="x3" />
+      </textFill>
+    </Label>
+    <Label fx:id="teamBName" alignment="CENTER" font="$x2" layoutX="853.0" layoutY="357.0" prefHeight="94.0" prefWidth="483.0" text="Team B" textAlignment="CENTER" textFill="$x3" />
+    <Label fx:id="period" depthTest="INHERIT" focusTraversable="false" font="$x4" graphicTextGap="4.0" layoutX="605.0" layoutY="-3.0" minHeight="178.0" prefHeight="338.0" prefWidth="178.0" text="9" textFill="#10cc00" textOverrun="CLIP" wrapText="false">
+      <labelFor>
+        <Label id="label" layoutX="126.0" layoutY="120.0" minHeight="16.0" minWidth="69.0" />
+      </labelFor>
+    </Label>
+    <Label fx:id="teamAFoul" alignment="TOP_RIGHT" depthTest="INHERIT" focusTraversable="false" graphicTextGap="4.0" layoutX="-13.0" layoutY="524.0" minHeight="136.0" prefHeight="176.0" prefWidth="216.0" text="99" textAlignment="RIGHT" textOverrun="CLIP" wrapText="false">
+      <font>
+        <Font name="DS-Digital Bold" size="200.0" fx:id="x6" />
+      </font>
+      <labelFor>
+        <Label id="label" layoutX="126.0" layoutY="120.0" minHeight="16.0" minWidth="69.0" />
+      </labelFor>
+      <textFill>
+        <Color blue="0.000" green="0.576" red="0.800" fx:id="x5" />
+      </textFill>
+    </Label>
+    <Label fx:id="teamBFoul" alignment="TOP_RIGHT" depthTest="INHERIT" focusTraversable="false" font="$x6" graphicTextGap="4.0" layoutX="1129.0" layoutY="526.0" minHeight="136.0" prefHeight="183.0" prefWidth="237.0" text="99" textAlignment="RIGHT" textFill="$x5" textOverrun="CLIP" wrapText="false">
+      <labelFor>
+        <Label id="label" layoutX="126.0" layoutY="120.0" minHeight="16.0" minWidth="69.0" />
+      </labelFor>
+    </Label>
+  </children>
+</AnchorPane>
