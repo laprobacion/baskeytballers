@@ -7,15 +7,20 @@ import javafx.beans.value.ObservableValue;
  import javafx.scene.control.Button;
  import javafx.scene.control.Label;
  import javafx.scene.control.TextField;
- import javafx.stage.Stage;
- import scoreboard.game.Default;
+import javafx.scene.input.MouseEvent;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+import scoreboard.game.Default;
  import scoreboard.game.Game;
 import scoreboard.game.GameMedia;
  import scoreboard.game.Team;
  import scoreboard.game.Timer;
  import scoreboard.game.Utility;
- import scoreboard.game.stages.MessageBoxStage;
- 
+import scoreboard.game.stages.ColorStage;
+import scoreboard.game.stages.MessageBoxStage;
+import scoreboard.game.stages.ScoreBoardStage;
+
  public class FXMLControlController implements javafx.fxml.Initializable
  {
    @FXML   private Label teamAScore;
@@ -560,4 +565,13 @@ import scoreboard.game.GameMedia;
      this.minLabel.setFont(Utility.getFont(15));
      this.secLabel.setFont(Utility.getFont(15));
    }
+
+   public void goToColorPicker(MouseEvent mouseEvent) {
+     Stage stage = ColorStage.getInstance(mouseEvent.getSource()).getStage();
+     stage.initOwner(ScoreBoardStage.getInstance().getStage());
+     stage.initModality(Modality.APPLICATION_MODAL);
+     stage.initStyle(StageStyle.UNDECORATED);
+     stage.showAndWait();
+   }
+
  }

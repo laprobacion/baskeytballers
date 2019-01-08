@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="115.0" prefWidth="314.0" style="" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="scoreboard.messagebox.FXMLMessageBoxController">
+  <children>
+    <ImageView id="imageMessage" fx:id="errorImage" fitHeight="47.0" fitWidth="62.666668374197826" layoutX="19.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" />
+    <Label fx:id="messageLabel" alignment="TOP_LEFT" layoutX="71.0" layoutY="32.0" prefHeight="58.6915283203125" prefWidth="243.0" text="are you sure you want to delete everything you know" wrapText="true">
+      <font>
+        <Font name="Arial" size="15.0" />
+      </font>
+    </Label>
+    <Button fx:id="okButton" layoutX="148.0" layoutY="74.0" mnemonicParsing="false" onAction="#okAction" text="OK" />
+    <Button fx:id="yesButton" layoutX="82.0" layoutY="74.0" mnemonicParsing="false" onAction="#yesAction" text="Yes" />
+    <Button fx:id="noButton" layoutX="213.0" layoutY="74.0" mnemonicParsing="false" onAction="#noAction" text="No" />
+    <ImageView id="imageMessage" fx:id="askImage" fitHeight="58.69154077178052" fitWidth="47.0" layoutX="24.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" />
+  </children>
+</AnchorPane>

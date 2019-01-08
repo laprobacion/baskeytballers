@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_baskeytballers" default="compile.module.baskeytballers">
+  <dirname property="module.baskeytballers.basedir" file="${ant.file.module_baskeytballers}"/>
+  
+  <property name="module.jdk.home.baskeytballers" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.baskeytballers" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.baskeytballers" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.baskeytballers" value="-encoding UTF-8 -source 8 -target 8 ${compiler.args}"/>
+  
+  <property name="baskeytballers.output.dir" value="${module.baskeytballers.basedir}/out/production/baskeytballers"/>
+  <property name="baskeytballers.testoutput.dir" value="${module.baskeytballers.basedir}/out/test/baskeytballers"/>
+  
+  <path id="baskeytballers.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="baskeytballers.module.production.classpath">
+    <path refid="${module.jdk.classpath.baskeytballers}"/>
+  </path>
+  
+  <path id="baskeytballers.runtime.production.module.classpath">
+    <pathelement location="${baskeytballers.output.dir}"/>
+  </path>
+  
+  <path id="baskeytballers.module.classpath">
+    <path refid="${module.jdk.classpath.baskeytballers}"/>
+    <pathelement location="${baskeytballers.output.dir}"/>
+  </path>
+  
+  <path id="baskeytballers.runtime.module.classpath">
+    <pathelement location="${baskeytballers.testoutput.dir}"/>
+    <pathelement location="${baskeytballers.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.baskeytballers">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.baskeytballers">
+    <patternset refid="excluded.from.module.baskeytballers"/>
+  </patternset>
+  
+  <path id="baskeytballers.module.sourcepath">
+    <dirset dir="${module.baskeytballers.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.baskeytballers" depends="compile.module.baskeytballers.production,compile.module.baskeytballers.tests" description="Compile module baskeytballers"/>
+  
+  <target name="compile.module.baskeytballers.production" depends="register.custom.compilers" description="Compile module baskeytballers; production classes">
+    <mkdir dir="${baskeytballers.output.dir}"/>
+    <javac2 destdir="${baskeytballers.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.baskeytballers}/javac">
+      <compilerarg line="${compiler.args.baskeytballers}"/>
+      <bootclasspath refid="baskeytballers.module.bootclasspath"/>
+      <classpath refid="baskeytballers.module.production.classpath"/>
+      <src refid="baskeytballers.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.baskeytballers"/>
+    </javac2>
+    
+    <copy todir="${baskeytballers.output.dir}">
+      <fileset dir="${module.baskeytballers.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.baskeytballers.tests" depends="register.custom.compilers,compile.module.baskeytballers.production" description="compile module baskeytballers; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.baskeytballers" description="cleanup module">
+    <delete dir="${baskeytballers.output.dir}"/>
+    <delete dir="${baskeytballers.testoutput.dir}"/>
+  </target>
+</project>

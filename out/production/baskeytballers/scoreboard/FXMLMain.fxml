@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="373.0" prefWidth="480.0" style="-fx-background-color:black&#10;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scoreboard.FXMLMainController">
+  <children>
+    <Label fx:id="teamNameALabel" layoutX="35.0" layoutY="55.0" prefHeight="27.0" prefWidth="87.0" text="Team Name A" textFill="WHITE">
+      <font>
+        <Font size="15.0" fx:id="x1" />
+      </font>
+    </Label>
+    <Label fx:id="teamNameBLabel" font="$x1" layoutX="34.0" layoutY="83.0" prefHeight="27.0" prefWidth="87.0" text="Team Name B" textFill="WHITE" />
+    <Label fx:id="timePerPeriodLabel" font="$x1" layoutX="34.0" layoutY="114.0" prefHeight="27.0" prefWidth="105.0" text="Time Per Period" textFill="WHITE" />
+    <Label fx:id="shotClockLabel" font="$x1" layoutX="34.0" layoutY="145.0" prefHeight="27.0" prefWidth="87.0" text="Shot Clock" textFill="WHITE" />
+    <TextField id="teamANAme" fx:id="teamAName" layoutX="169.0" layoutY="56.0" prefWidth="187.0" />
+    <TextField fx:id="teamBName" layoutX="169.0" layoutY="85.0" prefWidth="187.0" />
+    <TextField fx:id="timePerPeriod" layoutX="169.0" layoutY="115.0" prefWidth="187.0" />
+    <TextField id="shotClockMAx" fx:id="shotClockMax" layoutX="169.0" layoutY="145.0" prefWidth="187.0" />
+    <Button fx:id="setAction" layoutX="233.0" layoutY="269.0" mnemonicParsing="false" onAction="#setActionEvent" text="Set" />
+    <Label fx:id="foulPenaltyLabel" font="$x1" layoutX="35.0" layoutY="205.0" prefHeight="27.0" prefWidth="105.0" text="Foul Penalty" textFill="WHITE" />
+    <TextField id="shotClockMAx" fx:id="foulPenalty" layoutX="170.0" layoutY="206.0" prefWidth="187.0" />
+    <Label fx:id="timeoutPerPeriodLabel" font="$x1" layoutX="35.0" layoutY="236.0" prefHeight="27.0" prefWidth="135.0" text="Timeout per period" textFill="WHITE" />
+    <TextField id="shotClockMAx" fx:id="timeoutPerPeriod" layoutX="170.0" layoutY="237.0" prefWidth="187.0" />
+    <Label fx:id="titleBarLabel" layoutX="126.0" layoutY="12.0" text="Default Settings" textFill="#ffb800">
+      <font>
+        <Font size="30.0" />
+      </font>
+    </Label>
+    <Label fx:id="errorMessage" alignment="CENTER" font="$x1" layoutX="41.0" layoutY="300.0" prefWidth="404.0" text="Error Message" textAlignment="CENTER" textFill="RED" />
+    <Label id="errorMessage" alignment="CENTER" layoutX="354.0" layoutY="122.0" prefWidth="105.0" text="( 1 to 99 only )" textAlignment="CENTER" textFill="RED">
+      <font>
+        <Font name="Batang" size="12.0" fx:id="x2" />
+      </font>
+    </Label>
+    <Label id="errorMessage" alignment="CENTER" font="$x2" layoutX="354.0" layoutY="151.0" prefWidth="105.0" text="( 1 to 99 only )" textAlignment="CENTER" textFill="RED" />
+    <Label id="errorMessage" alignment="CENTER" font="$x2" layoutX="354.0" layoutY="210.0" prefWidth="105.0" text="( 1 to 10 only )" textAlignment="CENTER" textFill="RED" />
+    <Label id="errorMessage" alignment="CENTER" font="$x2" layoutX="355.0" layoutY="242.0" prefWidth="105.0" text="( 1 to 10 only )" textAlignment="CENTER" textFill="RED" />
+      <TextField id="shotClockMAx2" fx:id="shotClockMax1" layoutX="169.0" layoutY="175.0" prefWidth="187.0" />
+      <Label fx:id="shotClockLabel1" font="$x1" layoutX="34.0" layoutY="173.0" prefHeight="27.0" prefWidth="87.0" text="Shot Clock 2" textFill="WHITE" />
+      <Label id="errorMessage" alignment="CENTER" font="$x2" layoutX="354.0" layoutY="180.0" prefWidth="105.0" text="( 1 to 99 only )" textAlignment="CENTER" textFill="RED" />
+  </children>
+</AnchorPane>
